@@ -5,5 +5,20 @@
 	<select id="SELECT_TERMS" resultType="kr.co.sboard.vo.TermsVO">
 		SELECT * FROM `JSP_TERMS`;
 	</select>	
+	
+	<insert id="INSERT_MEMBER" >
+		INSERT INTO `JSP_MEMBER` SET
+		 uid=#{uid},
+		 pass=PASSWORD(#{pass}),
+		 name=#{name},
+		 nick=#{nick},
+		 email=#{email},
+		 hp=#{hp},
+		 zip=#{zip},
+		 addr1=#{addr1},
+		 addr2=#{addr2},
+		 regip=#{regip},
+		 rdate=NOW();
+	</insert>
 
 </mapper>

@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import kr.co.sboard.dao.MemberDao;
+import kr.co.sboard.vo.MemberVO;
 import kr.co.sboard.vo.TermsVO;
 @Service
 public class MemberServiceImpl implements MemberService{
@@ -24,8 +25,8 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
-	public void register() {
-		dao.register();
+	public void register(MemberVO vo) {
+		dao.register(vo);
 	}
 
 }
