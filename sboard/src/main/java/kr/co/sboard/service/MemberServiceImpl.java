@@ -8,15 +8,14 @@ import kr.co.sboard.dao.MemberDao;
 import kr.co.sboard.vo.MemberVO;
 import kr.co.sboard.vo.TermsVO;
 @Service
-public class MemberServiceImpl implements MemberService{
+public class MemberServiceImpl implements MemberService {
 
 	@Inject
 	private MemberDao dao;
 	
 	@Override
-	public void login() {
-		dao.login();
-		
+	public MemberVO login(MemberVO vo) {
+		return dao.login(vo);
 	}
 
 	@Override

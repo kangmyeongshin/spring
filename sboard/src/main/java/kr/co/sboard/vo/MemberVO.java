@@ -14,6 +14,15 @@ public class MemberVO {
 	private String addr2;
 	private String regip;
 	private String rdate;
+	private String file;
+	
+	
+	public String getFile() {
+		return file;
+	}
+	public void setFile(String file) {
+		this.file = file;
+	}
 	public int getSeq() {
 		return seq;
 	}
