@@ -1,5 +1,7 @@
 package kr.co.sboard.vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class BoardVO {
 	private int seq;
 	private int parent;
@@ -12,7 +14,18 @@ public class BoardVO {
 	private String uid;
 	private String regip;
 	private String rdate;
-
+	
+	//파일업로드용 타입
+	private MultipartFile fname;
+	
+	
+	public MultipartFile getFname() {
+		return fname;
+	}
+	public void setFname(MultipartFile fname) {
+		this.fname = fname;
+	}
+	
 	public int getSeq() {
 		return seq;
 	}

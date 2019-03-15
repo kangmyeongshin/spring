@@ -4,12 +4,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>로그인</title>
-		<link rel="stylesheet" href="/sboard/css/style.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
 	</head>
 	<body>
 		<div id="member">
 			<section class="login">		
-				<form action="/sboard/member/login" method="POST">
+				<form action="${pageContext.request.contextPath}/member/login" method="POST">
 					<table>
 						<tr>
 							<td><img src="/sboard/img/login_ico_id.png" alt="아이디" /></td>

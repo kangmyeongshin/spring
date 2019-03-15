@@ -19,8 +19,7 @@ public class BoardDaoTest {
 	
 
 
-
- 	@Test
+	@Test
 	public void writeTest() {		
 		BoardVO vo = new BoardVO();
 
@@ -30,9 +29,14 @@ public class BoardDaoTest {
 		vo.setUid("abcd1122");
 		vo.setRegip("129.1.1.1");
 
- 		dao.write(vo);
+ 		int seq = dao.write(vo);
 
- 		System.out.println("write 테스트 완료!!!");
+ 		System.out.println("write 테스트 완료!!! : " +seq);
 	}
 
+ 	
+ 	public void getTotalCount() {
+ 		int count = dao.getTotalCount();
+ 		System.out.println("게시물 카운트 : "+count);
+ 	}
  }
