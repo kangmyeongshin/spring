@@ -23,11 +23,11 @@ public interface BoardService {
 	public BoardVO view(String seq);
 	public int write(BoardVO vo);
 	public FileVO fileUpload(HttpServletRequest req,MultipartFile file, int parent);
-	public void fileDownload();
+	public FileVO fileDownload(int parent);
 	
-	public void modify();
-	public void delete();
+	public int modify(BoardVO vo);
 	public void fileWrite(FileVO fvo);
 	public FileVO fileView(String seq);
+	public void delete(String seq);
 
 }

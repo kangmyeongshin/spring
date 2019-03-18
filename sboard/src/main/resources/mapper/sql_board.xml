@@ -20,7 +20,8 @@
 			content=#{content},
 			file=#{file},
 			uid=#{uid},
-			regip=#{regip};	
+			regip=#{regip},
+			rdate=NOW();	
 	</insert>
 
 	<insert id="INSERT_FILE">
@@ -39,5 +40,25 @@
 		SELECT * FROM `JSP_BOARD`
 		WHERE seq=#{seq};
 		</select>
-
+		
+		<select id="SELECT_FILE" resultType="kr.co.sboard.vo.FileVO">
+		SELECT * FROM `JSP_FILE` WHERE parent=#{parent};		
+		</select>
+	
+		<delete id="DELETE_LIST">
+        delete from `JSP_BOARD`
+        where seq=#{seq};
+		</delete>
+		
+		<update id="UPDATE_LIST" >
+		UPDATE `JSP_BOARD` SET
+			cate=#{cate},
+			title=#{title},
+			content=#{content},
+			file=#{file},
+			uid=#{uid},
+			regip=#{regip},
+			rdate=NOW()
+		WHERE seq=#{seq};	
+		</update>
 </mapper>

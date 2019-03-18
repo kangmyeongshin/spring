@@ -129,20 +129,14 @@ public class BoardServiceImpl implements BoardService{
 			}
 
 
-	@Override
-	public void fileDownload() {
-		
-	}
+
 	
 	@Override
-	public void modify() {
-		dao.modify();
+	public void delete(String seq) {
+		 dao.delete(seq);
+		
 	}
 
-	@Override
-	public void delete() {
-		dao.delete();
-	}
 
 
 	@Override
@@ -156,6 +150,28 @@ public class BoardServiceImpl implements BoardService{
 	public FileVO fileView(String seq) {
 		return dao.fileView(seq);
 	}
+
+
+	@Override
+	public FileVO fileDownload(int parent) {
+		return dao.fileDownload(parent);
+		
+	}
+
+
+
+
+	@Override
+	public int modify(BoardVO vo) {
+		return dao.modify(vo);
+	}
+
+
+	
+
+
+
+
 
 
 

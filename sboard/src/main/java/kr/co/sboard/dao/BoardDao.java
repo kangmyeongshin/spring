@@ -37,13 +37,19 @@ public class BoardDao {
 	public FileVO fileView(String seq) {
 		return mybatis.selectOne("ns_mapper_sql_board.SELECT_FILEVIEW",seq);
 	}
-
-	public void modify() {
+	public FileVO fileDownload(int parent) {
+		return mybatis.selectOne("ns_mapper_sql_board.SELECT_FILE",parent);
 		
 	}
 
-	public void delete() {
+	public void delete(String seq) {
+		mybatis.delete("ns_mapper_sql_board.DELETE_LIST",seq);
 		
 	}
-	
+	public int modify(BoardVO vo) {
+		return mybatis.update("ns_mapper_sql_board.UPDATE_LIST",vo);
+		
+		
+	}
+
 }
