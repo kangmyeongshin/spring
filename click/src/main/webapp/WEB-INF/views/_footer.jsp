@@ -5,7 +5,7 @@
             <div id="wrapper">
 
             <div> CUSTOMER CENTER
-              <p><img src="../img/phone.png" alt="call">1644-4370</p>
+              <p><img src="/click/img/phone.png" alt="call">1644-4370</p>
               <p>MON - FRI 10AM - 4PM<br/>
               LUNCH 12PM-1PM</br>
               SAT, SUN, HOLIDAY OFF</p>
@@ -23,10 +23,10 @@
 
             <div> STORE GUIDE
               <ul>
-                <li><a href="./notice.html"><img src="../img/notice.png" alt="로고"><span>공지사항</span></a></li>
-                <li><a href="./notice.html"><img src="../img/center.png" alt="로고"><span>고객센터</span></a></li>
-                <li><a href="./notice.html"><img src="../img/refund.png" alt="로고"><span>교환/반품</span></a></li>
-                <li><a href="./notice.html"><img src="../img/review.png" alt="로고"><span>상품리뷰</span></a></li>
+                <li><a href="./notice.html"><img src="/click/img/notice.png" alt="로고"><span>공지사항</span></a></li>
+                <li><a href="./notice.html"><img src="/click/img/center.png" alt="로고"><span>고객센터</span></a></li>
+                <li><a href="./notice.html"><img src="/click/img/refund.png" alt="로고"><span>교환/반품</span></a></li>
+                <li><a href="./notice.html"><img src="/click/img/review.png" alt="로고"><span>상품리뷰</span></a></li>
             </ul>
             </div>
 

@@ -31,9 +31,39 @@ class CateController {
 	}
 	
 	@RequestMapping("/cate/outer")
-	public String outer() {
+	public String outer(Model model) throws Exception {
+		
+		Map<String, List<ShopClothesVO>> goodsMap = service.listGoods();
+ 		model.addAttribute("goodsMap", goodsMap);
 		return "/cate/outer";
 	}
+	
+	@RequestMapping("/cate/kindofOuter")
+	public String coat(Model model, String cate) throws Exception {
+		//System.out.println(cate);
+		List<ShopClothesVO> goodsList = service.listKindOfOuterGoods(cate);
+ 		model.addAttribute("goodsList", goodsList);
+ 		
+		return "/cate/outer";
+	}
+	
+	@RequestMapping("/cate/knit")
+	public String knit(Model model) throws Exception {
+		
+		Map<String, List<ShopClothesVO>> goodsMap = service.listGoods();
+ 		model.addAttribute("goodsMap", goodsMap);
+		return "/cate/knit";
+	}
+	@RequestMapping("/cate/kindofKnit")
+	public String knitList(Model model, String cate) throws Exception {
+		//System.out.println(cate);
+		List<ShopClothesVO> goodsList = service.listKindOfOuterGoods(cate);
+ 		model.addAttribute("goodsList", goodsList);
+		
+		return "/cate/knit";
+ 
+	}
+	
 	@RequestMapping("/detail/thumbnail")
 	protected void thumbnails(String fileName, String goods_id, HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		String imgPath = req.getSession().getServletContext().getRealPath("/")+"/resources/detail";

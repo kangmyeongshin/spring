@@ -6,7 +6,23 @@ public class ShopClothesVO {
 	private int GOODS_SALES_PRICE;
 	private int GOODS_PRICE;
 	private String GOODS_STATUS;
+	private String CATE;
+	private String GOODS_MAIN_CATE;
 	
+	
+		
+	public String getGOODS_MAIN_CATE() {
+		return GOODS_MAIN_CATE;
+	}
+	public void setGOODS_MAIN_CATE(String gOODS_MAIN_CATE) {
+		GOODS_MAIN_CATE = gOODS_MAIN_CATE;
+	}
+	public String getCATE() {
+		return CATE;
+	}
+	public void setCATE(String cATE) {
+		CATE = cATE;
+	}
 	private String FILENAME;
 	public String getFILENAME() {
 		return FILENAME;

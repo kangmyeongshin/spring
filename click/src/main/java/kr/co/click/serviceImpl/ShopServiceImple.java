@@ -23,7 +23,19 @@ public class ShopServiceImple implements shopService{
 
  		List<ShopClothesVO> goodsList = dao.selectGoodsList("new");
 		goodsMap.put("new", goodsList);
+		goodsList = dao.selectGoodsList("outer");
+		goodsMap.put("outer", goodsList);
+		goodsList = dao.selectGoodsList("knit/cardigan");
+		goodsMap.put("knit", goodsList);
+		
+		
+
 		return goodsMap;
+	}
+
+	@Override
+	public List<ShopClothesVO> listKindOfOuterGoods(String cate) {
+		return dao.listKindOfOuterGoods(cate);
 	}
 
 }

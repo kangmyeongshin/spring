@@ -16,6 +16,13 @@ public class ShopDao {
 	private SqlSessionTemplate mybatis;
 
 	public List<ShopClothesVO> selectGoodsList(String goodStatus) {
-		return mybatis.selectList("bt.mapper.clothes.selectGoodsList",goodStatus);
+		return mybatis.selectList("bt.mapper.clothes.selectGoodsList", goodStatus);
+	}
+	
+	
+	public List<ShopClothesVO> listKindOfOuterGoods(String cate){
+		return mybatis.selectList("bt.mapper.clothes.selectOuterGoodsList", cate);
 	}
 }
+
+

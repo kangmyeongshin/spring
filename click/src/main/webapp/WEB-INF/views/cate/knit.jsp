@@ -6,13 +6,11 @@
       <main>
         <div class="list">
           <div class="head_cate">
-            <h2 class="cate_fo">OUTER</h2>
+            <h2 class="cate_fo">KNIT / CARDIGAN</h2>
             <div class="midcate">
               <ul>
-                <li><a href="/click/cate/kindofOuter?cate=coat">코트</a><span>/</span></li>
-                <li><a href="/click/cate/kindofOuter?cate=jacket">자켓</a><span>/</span></li>
-                <li><a href="/click/cate/kindofOuter?cate=jumper">점퍼</a><span>/</span></li>
-                <li><a href="#">베스트</a><span></span></li>
+                <li><a href="/click/cate/kindofKnit?cate=knit">니트</a><span>/</span></li>
+                <li><a href="/click/cate/kindofKnit?cate=cardigan">가디건</a><span>/</span></li>
               </ul>
             </div>
           </div>
@@ -31,7 +29,7 @@
           <div class="prd_wrap">
             <ul>
             <c:if test="${goodsMap != null }">
-              <c:forEach var="item" items="${goodsMap.outer}">
+              <c:forEach var="item" items="${goodsMap.knit}">
             <li class="item">
                 <div class="space">
                     <div class="thumbnail">

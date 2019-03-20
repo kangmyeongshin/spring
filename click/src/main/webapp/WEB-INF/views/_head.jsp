@@ -79,15 +79,15 @@
             <li><a href="/click/cate/new">NEW</a></li>
             <li><a href="/click/cate/outer">OUTER</a>
               <ul>
-                <li><a href="#">코트</a></li>
-                <li><a href="#">자켓</a></li>
-                <li><a href="#">점퍼</a></li>
+                <li><a href="/click/cate/kindofOuter?cate=coat">코트</a></li>
+                <li><a href="/click/cate/kindofOuter?cate=jacket">자켓</a></li>
+                <li><a href="/click/cate/kindofOuter?cate=jumper">점퍼</a></li>
                 <li><a href="#">베스트</a></li>
               </ul>
             </li>
-            <li><a href="#">KNIT/CARDIGAN</a>
+            <li><a href="/click/cate/knit">KNIT/CARDIGAN</a>
               <ul>
-                <li><a href="#">니트</a></li>
+                <li><a href="/click/cate/kindOfKnit">니트</a></li>
                 <li><a href="#">가디건</a></li>
               </ul>
             </li>

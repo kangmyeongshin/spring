@@ -13,5 +13,7 @@ public interface shopService {
 
 
 	public Map<String, List<ShopClothesVO>> listGoods() throws Exception;
+	
+	public List<ShopClothesVO> listKindOfOuterGoods(String cate);
 
 }

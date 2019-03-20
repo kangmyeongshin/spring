@@ -4,7 +4,18 @@
 	<select id="selectGoodsList" resultType="kr.co.click.vo.ShopClothesVO">
 		<![CDATA[
 			SELECT g.*, d.FILENAME FROM CLICK_SHOP_CLOTHES AS g, CLICK_SHOP_CLOTHES_IMAGE AS d
-	 		WHERE g.GOODS_ID=d.GOODS_ID AND g.GOODS_STATUS=#{goodsStatus};
+	 		WHERE (g.GOODS_ID=d.GOODS_ID AND g.GOODS_STATUS=#{goodsStatus})
+	 		OR (g.GOODS_ID=d.GOODS_ID AND g.GOODS_MAIN_CATE=#{goodsMainCate});
 		]]>
 	</select>
+	
+	<select id="selectOuterGoodsList" resultType="kr.co.click.vo.ShopClothesVO">
+		<![CDATA[
+			SELECT g.*, d.FILENAME FROM CLICK_SHOP_CLOTHES AS g, CLICK_SHOP_CLOTHES_IMAGE AS d
+	 		WHERE g.GOODS_ID=d.GOODS_ID AND g.CATE=#{cate};
+		]]>
+	</select>
+	
+	
+	
 </mapper>
