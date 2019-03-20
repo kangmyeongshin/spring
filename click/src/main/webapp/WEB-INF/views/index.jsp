@@ -132,7 +132,7 @@
         </div>
         <div class="under">
             <div id="wrapper">
-          <div><a href="#"><img src="./img/newitem.jpg"  alt="new"></a></div>
+          <div><a href="./cate/new"><img src="./img/newitem.jpg"  alt="new"></a></div>
           <div><a href="#"><img src="./img/spring.jpg"  alt="spring"></a></div>
           <div><a href="#"><img src="./img/size.jpg"  alt="size"></a></div>
         </div>

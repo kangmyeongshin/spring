@@ -23,7 +23,7 @@
 	<mvc:resources location="/resources/css/" mapping="/css/**"></mvc:resources>
 	<mvc:resources location="/resources/img/" mapping="/img/**"></mvc:resources>
 	<mvc:resources location="/resources/js/" mapping="/js/**"></mvc:resources>
-	<mvc:resources location="/resources/goods/" mapping="/goods/**"></mvc:resources>
+	<mvc:resources location="/resources/detail/" mapping="/detail/**"></mvc:resources>
 	
 	<!-- dataSource 설정(DB설정) -->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">

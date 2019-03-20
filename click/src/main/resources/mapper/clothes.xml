@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bt.mapper.clothes">
+	<select id="selectGoodsList" resultType="kr.co.click.vo.ShopClothesVO">
+		<![CDATA[
+			SELECT g.*, d.FILENAME FROM CLICK_SHOP_CLOTHES AS g, CLICK_SHOP_CLOTHES_IMAGE AS d
+	 		WHERE g.GOODS_ID=d.GOODS_ID AND g.GOODS_STATUS=#{goodsStatus};
+		]]>
+	</select>
+</mapper>

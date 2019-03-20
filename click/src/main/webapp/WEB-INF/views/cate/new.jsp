@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ include file="../_head.jsp" %>
       <main>
 
@@ -25,147 +27,28 @@
         <div class="prd_list">
           <div class="prd_wrap">
             <ul>
+              <c:forEach var="item" items="${goodsMap['new']}">
             <li class="item">
                 <div class="space">
                     <div class="thumbnail">
-                      <a href="#"> <img src="../img/1.gif" alt=""> </a>
+                  
+                      <a href="#">
+                      <img src="/click/detail/${item.GOODS_ID}/${item.FILENAME}" alt=""> </a>
                     </div>
                     <div class="prd_info">
                       <div class="prd_name">
-                        블라우스1
+                     ${item.GOODS_TITLE}
                       </div>
                       <div class="price">
-                        2000원
+                       <fmt:formatNumber value="${item.GOODS_PRICE}" type="number" var="goods_price" />${goods_price}원
                       </div>
                     </div>
+                   
                 </div>
             </li>
+             </c:forEach>
               </ul>
-              <ul>
-            <li class="item">
-                <div class="space">
-                    <div class="thumbnail">
-                      <a href="#"> <img src="../img/1.gif" alt=""></a>
-                    </div>
-                    <div class="prd_info">
-                      <div class="prd_name">
-                        블라우스1
-                      </div>
-                      <div class="price">
-                        2000원
-                      </div>
-                    </div>
-                </div>
-            </li>
-          </ul>
-          <ul>
-            <li class="item">
-                <div class="space">
-                    <div class="thumbnail">
-                      <a href="#"> <img src="../img/1.gif" alt=""></a>
-                    </div>
-                    <div class="prd_info">
-                      <div class="prd_name">
-                        블라우스1
-                      </div>
-                      <div class="price">
-                        2000원
-                      </div>
-                    </div>
-                </div>
-            </li>
-          </ul>
-          <ul>
-            <li class="item">
-                <div class="space">
-                    <div class="thumbnail">
-                      <a href="#"> <img src="../img/1.gif" alt=""> </a>
-                    </div>
-
-                  <div class="prd_info">
-                    <div class="prd_name">
-                      블라우스1
-                    </div>
-                    <div class="price">
-                      2000원
-                    </div>
-                  </div>
-                </div>
-            </li>
-          </ul>
-          <ul>
-            <li class="item">
-                <div class="space">
-                    <div class="thumbnail">
-                      <a href="#"> <img src="../img/1.gif" alt=""> </a>
-                    </div>
-
-                  <div class="prd_info">
-                    <div class="prd_name">
-                      블라우스1
-                    </div>
-                    <div class="price">
-                      2000원
-                    </div>
-                  </div>
-                </div>
-            </li>
-          </ul>
-          <ul>
-            <li class="item">
-                <div class="space">
-                    <div class="thumbnail">
-                      <a href="#"> <img src="../img/1.gif" alt=""> </a>
-                    </div>
-
-                  <div class="prd_info">
-                    <div class="prd_name">
-                      블라우스1
-                    </div>
-                    <div class="price">
-                      2000원
-                    </div>
-                  </div>
-                  </div>
-            </li>
-          </ul>
-          <ul>
-            <li class="item">
-                <div class="space">
-                    <div class="thumbnail">
-                      <a href="#"> <img src="../img/1.gif" alt=""> </a>
-                    </div>
-
-                  <div class="prd_info">
-                    <div class="prd_name">
-                      블라우스1
-                    </div>
-                    <div class="price">
-                      2000원
-                    </div>
-                  </div>
-                </div>
-            </li>
-          </ul>
-          <ul>
-            <li class="item">
-                <div class="space">
-                    <div class="thumbnail">
-                      <a href="#"> <img src="../img/1.gif" alt=""> </a>
-                    </div>
-
-                  <div class="prd_info">
-                    <div class="prd_name">
-                      블라우스1
-                    </div>
-                    <div class="price">
-                      2000원
-                    </div>
-                  </div>
-              </div>
-            </li>
-          </ul>
-          </div>
+            </div>
         </div>
   </div>
 
