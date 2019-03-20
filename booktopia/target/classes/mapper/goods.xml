@@ -9,5 +9,20 @@
 	 		ORDER BY g.GOODS_CREDATE;
 		]]>
 	</select>
+	<select id="selectGoodsDetail" resultType="kr.co.booktopia.vo.ShopGoodsVO">
+	    <![CDATA[
+		    SELECT g.*,d.fileName from BT_SHOP_GOODS g, BT_SHOP_GOODS_IMAGE d
+	        WHERE g.GOODS_ID=d.GOODS_ID
+	        AND d.FILETYPE='main_image'
+	        AND g.GOODS_ID=#{goods_id};	        
+    	]]>
+	</select>
+	
+ 	<select id="selectGoodsImage" resultType="kr.co.booktopia.vo.ShopGoodsImageVO">
+		<![CDATA[
+			SELECT * FROM BT_SHOP_GOODS_IMAGE
+			WHERE FILETYPE != 'main_image' AND GOODS_ID=#{goods_id};
+		]]>
+	</select>
 	
 </mapper>
