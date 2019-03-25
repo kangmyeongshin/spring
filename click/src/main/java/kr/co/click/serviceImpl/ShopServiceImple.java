@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import kr.co.click.dao.ShopDao;
 import kr.co.click.service.shopService;
+import kr.co.click.vo.ShopClothesImageVO;
 import kr.co.click.vo.ShopClothesVO;
 @Service
 public class ShopServiceImple implements shopService{
@@ -36,6 +37,11 @@ public class ShopServiceImple implements shopService{
 	@Override
 	public List<ShopClothesVO> listKindOfOuterGoods(String cate) {
 		return dao.listKindOfOuterGoods(cate);
+	}
+
+	@Override
+	public List<ShopClothesImageVO> shopdetail(String goods_id) {
+		return dao.shopdetail(goods_id);
 	}
 
 }

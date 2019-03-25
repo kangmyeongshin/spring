@@ -6,7 +6,7 @@
     <title>클릭앤퍼니</title>
     <link rel="stylesheet" href="/click/css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../js/hover.js"></script>
+    <script src="/click/resources/js/hover.js"></script>
     <script>
 
 
@@ -35,7 +35,7 @@
       <header>
         <div class="top">
           <div>
-            <a href="../"><img src="/click/img/logo.png" alt="로고"></a>
+            <a href="/click/"><img src="/click/img/logo.png" alt="로고"></a>
           </div>
           <div>
               <ul>
@@ -49,9 +49,9 @@
                  </li>
                   <li><a class ="login_btn" href="/click/member/join">JOIN</a></li>
                 <li>
-                  <a href="#">MY PAGE </a>
+                  <a href="/click/member/mypage?myorder">MY PAGE </a>
                   <ol>
-                    <li><a href="#">주문내역</a></li>
+                    <li><a href="/click/member/mypage?myorder">주문내역</a></li>
                     <li><a href="#">쿠폰내역</a></li>
                     <li><a href="#">적립금내역</a></li>
                     <li><a href="#">위시리스트</a></li>

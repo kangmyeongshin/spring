@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -13,21 +14,29 @@ import kr.co.click.vo.MemberVO;
 
 @Controller
 public class MemberController {
+
 	@Inject
 	private MemberService service;
-	private Object member;
 	
 	@RequestMapping(value="/member/login", method=RequestMethod.GET)
-	public String login() {
+	public String login(Model model, String page) {
+		
+		model.addAttribute("page", page);
 		return "/member/login";
 	}
 	@RequestMapping(value="/member/login", method=RequestMethod.POST)
-	public String login(HttpSession sess, MemberVO vo) {
+	public String login(HttpSession sess, MemberVO vo, String page) {
 		MemberVO member = service.login(vo);
 		
 		if(member != null) {
 			sess.setAttribute("member", member);
-			return "redirect:/index";
+			
+			if(page == null) {
+				return "redirect:/index";
+			}else {
+				return "redirect:/member/mypage";
+			}
+			
 		}else {
 			return "redirect:/member/login?result=fail";
 		}
@@ -36,9 +45,8 @@ public class MemberController {
 	
 	@RequestMapping("/member/logout")
 	public String logout(HttpSession sess) {
-		sess.setAttribute("member", member);
 		sess.invalidate();
-		return "redirect:/member/login";
+		return "redirect:/index";
 	}
 	
 	@RequestMapping(value="/member/join" ,method=RequestMethod.GET)
@@ -55,5 +63,21 @@ public class MemberController {
 	public String faq() {
 		return "/member/faq";
 	}
+	
+	@RequestMapping("/member/mypage")
+	public String mypage(HttpSession sess) {
+		
+		MemberVO member = (MemberVO) sess.getAttribute("member");
+		
+		if(member != null) {
+			
+			//sess.setAttribute("member", member);
+			return "/member/mypage";
+			
+		}else {
+			return "redirect:/member/login?page=mypage";
+		}
+	}
 
 }
+	

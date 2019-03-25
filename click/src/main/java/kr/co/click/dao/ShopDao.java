@@ -8,6 +8,7 @@ import javax.inject.Inject;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
+import kr.co.click.vo.ShopClothesImageVO;
 import kr.co.click.vo.ShopClothesVO;
 
 @Repository
@@ -22,6 +23,9 @@ public class ShopDao {
 	
 	public List<ShopClothesVO> listKindOfOuterGoods(String cate){
 		return mybatis.selectList("bt.mapper.clothes.selectOuterGoodsList", cate);
+	}
+	public List<ShopClothesImageVO> shopdetail(String goods_id) {
+		return mybatis.selectList("bt.mapper.clothes.selectImage",goods_id);
 	}
 }
 

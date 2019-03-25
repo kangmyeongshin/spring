@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.click.service.shopService;
+import kr.co.click.vo.ShopClothesImageVO;
 import kr.co.click.vo.ShopClothesVO;
 import net.coobird.thumbnailator.Thumbnails;
 
@@ -80,6 +81,6 @@ class CateController {
 		out.write(buffer);
 		out.close();
 	}
-	
+
 
 }

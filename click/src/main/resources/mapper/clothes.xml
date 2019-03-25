@@ -16,6 +16,15 @@
 		]]>
 	</select>
 	
+	<select id="selectImage" resultType="kr.co.click.vo.ShopClothesImageVO">
+	<![CDATA[
+			SELECT g.*, d.FILENAME FROM CLICK_SHOP_CLOTHES AS g, CLICK_SHOP_CLOTHES_IMAGE AS d
+	 		WHERE g.GOODS_ID=d.GOODS_ID;
+	]]>
+	</select>
+	
+
+	
 	
 	
 </mapper>

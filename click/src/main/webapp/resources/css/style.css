@@ -490,3 +490,24 @@ fieldset>.search> a{font-size: 2em;}
 .prd_wrap>ul>.item>.space {margin-left: 17px; margin-bottom: 40px;}
 .prd_wrap>ul>.item img{width: 378px; height: 378px;}
 .prd_price{}
+
+  /*detail*/
+  
+#detail_wrap{width: 100%; height: 900px; margin: 70px 0;}
+.detail_left{width: 700px; height: 550px; float: left;    padding-left: 265px; }
+.detail_left>.left_img{width: 600px; height: 550px; border: 1px solid black; }
+
+.detail_right{width: 500px; height: 550px;float: right;margin-right: 100px;}
+.cinfo > .name {width: 500px; height: 50px; }
+.cinfo > .price { width: 500px; height: 40px; }
+.detail_right >table{width: 500px; height: 300px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada;}
+.detail_right >table>tbody>tr>th {text-align: left;}
+.detail_right >table>tbody>tr>th>td {text-align: right;}
+
+
+.total_price {width: 150px; height: 40px;  float: right; }
+.btn_detail{display: inline-block;margin: 0 30px;}
+.btn_detail> .cart {width: 200px; height: 100px;  float: left; margin-right: 20px;border: 1px solid #dadada;
+                    font-size: 20px;line-height: 95px; text-align: center;}
+.btn_detail> .buy {width: 200px; height: 100px;  float: right;background: #484848;font-size: 20px;
+                   line-height: 95px; text-align: center;}

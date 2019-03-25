@@ -9,6 +9,7 @@
                   <div class="login-box">
                       <h3 class="login-sub-tit">로그인</h3>
                       <form action="/click/member/login" method="post" name="form1" autocomplete="off">
+                  					<input type="hidden" name="page" value="${page}" />
                   					<div class="clear">
                   						<div class="login-left fright">
                   							<div class="input-box">
