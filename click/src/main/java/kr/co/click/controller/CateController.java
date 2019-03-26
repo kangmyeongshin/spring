@@ -82,5 +82,12 @@ class CateController {
 		out.close();
 	}
 
+	@RequestMapping("/cate/shopdetail")
+	public String shopdetail(Model model,String goods_id) {
+		ShopClothesVO goods = service.shopdetail(goods_id);
+		model.addAttribute("goods", goods);
+		System.out.print(goods_id);
+		return "/cate/shopdetail";
+	}
 
 }

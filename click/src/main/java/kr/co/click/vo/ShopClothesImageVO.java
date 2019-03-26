@@ -4,6 +4,15 @@ public class ShopClothesImageVO {
 	private int IMAGE_ID;
 	private int GOODS_ID;
 	private String FILENAME;
+	private String FILETYPE;
+	
+	
+	public String getFILETYPE() {
+		return FILETYPE;
+	}
+	public void setFILETYPE(String fILETYPE) {
+		FILETYPE = fILETYPE;
+	}
 	public int getIMAGE_ID() {
 		return IMAGE_ID;
 	}

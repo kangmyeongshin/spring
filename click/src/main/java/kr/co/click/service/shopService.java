@@ -17,7 +17,7 @@ public interface shopService {
 	
 	public List<ShopClothesVO> listKindOfOuterGoods(String cate);
 	
-	public List<ShopClothesImageVO> shopdetail(String goods_id);
+	public ShopClothesVO shopdetail(String goods_id);
 
 
 }

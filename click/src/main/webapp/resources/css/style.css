@@ -494,8 +494,8 @@ fieldset>.search> a{font-size: 2em;}
   /*detail*/
   
 #detail_wrap{width: 100%; height: 900px; margin: 70px 0;}
-.detail_left{width: 700px; height: 550px; float: left;    padding-left: 265px; }
-.detail_left>.left_img{width: 600px; height: 550px; border: 1px solid black; }
+.detail_left{width: 700px; height: 550px; float: left;    padding-left: 100px; }
+.detail_left>.left_img{width: 700px; height: 550px;}
 
 .detail_right{width: 500px; height: 550px;float: right;margin-right: 100px;}
 .cinfo > .name {width: 500px; height: 50px; }

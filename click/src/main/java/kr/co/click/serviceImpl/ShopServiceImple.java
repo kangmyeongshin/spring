@@ -40,7 +40,7 @@ public class ShopServiceImple implements shopService{
 	}
 
 	@Override
-	public List<ShopClothesImageVO> shopdetail(String goods_id) {
+	public ShopClothesVO shopdetail(String goods_id) {
 		return dao.shopdetail(goods_id);
 	}
 

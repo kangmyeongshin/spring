@@ -10,6 +10,7 @@ public class ShopClothesVO {
 	private String GOODS_MAIN_CATE;
 	
 	
+	
 		
 	public String getGOODS_MAIN_CATE() {
 		return GOODS_MAIN_CATE;

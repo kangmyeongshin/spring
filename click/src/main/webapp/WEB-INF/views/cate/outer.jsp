@@ -36,7 +36,7 @@
                 <div class="space">
                     <div class="thumbnail">
                   
-                      <a href="#">
+                      <a href="/click/cate/shopdetail?goods_id=${item.GOODS_ID}">
                       <img src="/click/detail/${item.GOODS_ID}/${item.FILENAME}" alt=""> </a>
                     </div>
                     <div class="prd_info">

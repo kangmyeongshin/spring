@@ -5,15 +5,14 @@
           <div id="wrapper">
             <div id="detail_wrap">
            	 <div class="detail_left">
-              <div class="left_img">
-                            
-                <img src="/click/detail/${vo.GOODS_ID}/${vo.FILENAME}" alt="옷이미지">
+              <div class="left_img" >
+                <img src="/click/detail/${goods.GOODS_ID}/${goods.FILENAME}" alt="옷이미지">
               </div>
             </div>
             <div class="detail_right">
               <div class="cinfo">
-                <div class="name">옷이름 </div>
-                <div class="price"><span>옷가격</span> </div>
+                <div class="name">${goods.GOODS_TITLE} </div>
+                <div class="price"><span>${goods.GOODS_PRICE}원</span> </div>
               </div>
               <table>
                 <tbody>

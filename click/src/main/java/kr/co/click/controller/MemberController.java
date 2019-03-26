@@ -27,11 +27,11 @@ public class MemberController {
 	@RequestMapping(value="/member/login", method=RequestMethod.POST)
 	public String login(HttpSession sess, MemberVO vo, String page) {
 		MemberVO member = service.login(vo);
-		
+
 		if(member != null) {
 			sess.setAttribute("member", member);
 			
-			if(page == null) {
+			if(page.equals("")) {
 				return "redirect:/index";
 			}else {
 				return "redirect:/member/mypage";
