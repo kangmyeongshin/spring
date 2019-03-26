@@ -511,3 +511,26 @@ fieldset>.search> a{font-size: 2em;}
                     font-size: 20px;line-height: 95px; text-align: center;}
 .btn_detail> .buy {width: 200px; height: 100px;  float: right;background: #484848;font-size: 20px;
                    line-height: 95px; text-align: center;}
+
+                   
+/*MY PAGE*/
+.Mypage-tit{width: 100%; height: 150px;text-align: center; }
+.Mypage-tit > img { padding: 50px 0;}
+
+.mypage_box{width: 1200px; height: 200px;margin: 0 auto;background: #fcfcfc;}
+.mypage_box >.boxmargin{width: 1100px; height: 100px;padding: 45px 30px;}
+.mypage_box >.boxmargin> .myinfo{width: 400px; height: 110px; float: left; border-right:1px solid black;}
+.mypage_box >.boxmargin> .myinfo > .member_icon {width: 50px; height: 50px;  float: left; margin: 0 25px;}
+.mypage_box >.boxmargin> .myinfo > .info{width: 200px; height: 100px;margin-left: 100px;}
+.mypage_box >.boxmargin> .myinfo > .info>p{margin-left:60px;}
+.mypage_box >.boxmargin> .link{width: 699px; height: 110px;float: left;}
+.mypage_box >.boxmargin> .link>ul{margin-left: 30px;}
+.mypage_box >.boxmargin> .link>ul>li{display: inline-block; margin: 0 20px;}
+.mypage_box >.boxmargin> .link>ul>li:nth-child(1)>a{}
+
+.list_title{width: 1200px; height: 50px; margin: 0 auto;}
+.list_title >p {padding:20px 0;}
+
+.tablelist {width: 1200px; height: 200px;margin: 0 auto;border-top: 2px solid black;}
+.tablelist > table{width: 100%; height: 100%;border-collapse: collapse;}
+.tablelist > table> tbody td {border-top: 1px solid black;border-bottom: 1px solid black;}

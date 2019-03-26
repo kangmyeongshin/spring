@@ -87,21 +87,21 @@
             </li>
             <li><a href="/click/cate/knit">KNIT/CARDIGAN</a>
               <ul>
-                <li><a href="/click/cate/kindOfKnit">니트</a></li>
-                <li><a href="#">가디건</a></li>
+                <li><a href="/click/cate/kindofKnit?cate=knit">니트</a></li>
+                <li><a href="/click/cate/kindofKnit?cate=cardigan">가디건</a></li>
               </ul>
             </li>
-            <li><a href="#">PANTS</a>
+            <li><a href="/click/cate/pants">PANTS</a>
               <ul>
-                <li><a href="#">데님</a></li>
-                <li><a href="#">슬렉스</a></li>
+                <li><a href="/click/cate/kindofPants?cate=denim">데님</a></li>
+                <li><a href="/click/cate/kindofPants?cate=slacks">슬렉스</a></li>
                 <li><a href="#">반바지</a></li>
                 <li><a href="#">면팬츠</a></li>
               </ul>
             </li>
-            <li><a href="#">TEE</a>
+            <li><a href="/click/cate/tee">TEE</a>
               <ul>
-                <li><a href="#">무지티</a></li>
+                <li><a href="/click/cate/kindofTee?cate=tee">무지티</a></li>
                 <li><a href="#">후드/맨투맨</a></li>
               </ul>
             </li>

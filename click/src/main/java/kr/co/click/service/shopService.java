@@ -20,4 +20,5 @@ public interface shopService {
 	public ShopClothesVO shopdetail(String goods_id);
 
 
+
 }

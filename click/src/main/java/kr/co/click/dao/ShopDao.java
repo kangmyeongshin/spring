@@ -27,6 +27,9 @@ public class ShopDao {
 	public ShopClothesVO shopdetail(String goods_id) {
 		return mybatis.selectOne("bt.mapper.clothes.selectshopdetail",goods_id);
 	}
+	public List<ShopClothesVO> tee(String goodStatus) {
+		return mybatis.selectList("bt.mapper.clothes.selectGoodsList",goodStatus);
+	}
 }
 
 

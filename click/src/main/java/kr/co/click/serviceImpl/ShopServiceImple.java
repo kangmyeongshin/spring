@@ -28,6 +28,10 @@ public class ShopServiceImple implements shopService{
 		goodsMap.put("outer", goodsList);
 		goodsList = dao.selectGoodsList("knit/cardigan");
 		goodsMap.put("knit", goodsList);
+		goodsList = dao.selectGoodsList("pants");
+		goodsMap.put("pants", goodsList);
+		goodsList = dao.selectGoodsList("tee");
+		goodsMap.put("tee", goodsList);
 		
 		
 
@@ -43,5 +47,7 @@ public class ShopServiceImple implements shopService{
 	public ShopClothesVO shopdetail(String goods_id) {
 		return dao.shopdetail(goods_id);
 	}
+
+
 
 }

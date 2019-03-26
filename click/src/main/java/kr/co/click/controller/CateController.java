@@ -64,8 +64,38 @@ class CateController {
 		return "/cate/knit";
  
 	}
-	
-	@RequestMapping("/detail/thumbnail")
+	@RequestMapping("/cate/pants")
+	public String pants(Model model) throws Exception {
+		
+		Map<String, List<ShopClothesVO>> goodsMap = service.listGoods();
+ 		model.addAttribute("goodsMap", goodsMap);
+		return "/cate/pants";
+	}
+	@RequestMapping("/cate/kindofPants")
+	public String pantsList(Model model, String cate) throws Exception {
+		List<ShopClothesVO> goodsList = service.listKindOfOuterGoods(cate);
+ 		model.addAttribute("goodsList", goodsList);
+		
+		return "/cate/pants";
+ 
+	}
+	@RequestMapping("/cate/tee")
+	public String tee(Model model) throws Exception {
+		
+		Map<String, List<ShopClothesVO>> goodsMap = service.listGoods();
+ 		model.addAttribute("goodsMap", goodsMap);
+		return "/cate/tee";
+	}
+	@RequestMapping("/cate/kindofTee")
+	public String teeList(Model model, String cate) throws Exception {
+		List<ShopClothesVO> goodsList = service.listKindOfOuterGoods(cate);
+ 		model.addAttribute("goodsList", goodsList);
+		
+		return "/cate/tee";
+ 
+	}
+
+	/*@RequestMapping("/detail/thumbnail")
 	protected void thumbnails(String fileName, String goods_id, HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		String imgPath = req.getSession().getServletContext().getRealPath("/")+"/resources/detail";
 		
@@ -80,7 +110,7 @@ class CateController {
 		byte[] buffer = new byte[1024*8];
 		out.write(buffer);
 		out.close();
-	}
+	}*/
 
 	@RequestMapping("/cate/shopdetail")
 	public String shopdetail(Model model,String goods_id) {
