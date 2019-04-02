@@ -22,6 +22,10 @@ public class MemberDao {
 	public void faq() {
 		
 	}
+
+	public MemberVO idCheck(String uid) {
+		return mybatis.selectOne("cl.mapper.member.idcheck",uid);
+	}
 	
 
 }

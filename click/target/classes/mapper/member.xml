@@ -18,4 +18,9 @@
 		 regip=#{regip},
 		 rdate=NOW();
 	</insert>
+	<select id="idcheck" resultType="kr.co.click.vo.MemberVO">
+      SELECT uid FROM CLICK_MEMBER
+      WHERE uid=#{uid};
+</select>
+	
 </mapper>

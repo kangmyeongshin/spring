@@ -1,13 +1,19 @@
 package kr.co.click.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Logger;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.co.click.service.MemberService;
 import kr.co.click.vo.MemberVO;
@@ -17,6 +23,7 @@ public class MemberController {
 
 	@Inject
 	private MemberService service;
+	private Logger logger;
 	
 	@RequestMapping(value="/member/login", method=RequestMethod.GET)
 	public String login(Model model, String page) {
@@ -30,7 +37,7 @@ public class MemberController {
 
 		if(member != null) {
 			sess.setAttribute("member", member);
-			
+			//page == null 은 안되고 page.equals("")로 해야 되었다.
 			if(page.equals("")) {
 				return "redirect:/index";
 			}else {
@@ -59,6 +66,22 @@ public class MemberController {
 		service.join(vo);
 		return "/member/login";
 	}
+	
+	@ResponseBody
+	@RequestMapping(value="/member/idCheck", method=RequestMethod.GET)
+	public int postIdCheck(HttpServletRequest req) throws Exception{
+
+	 String uid = req.getParameter("uid");
+	 MemberVO idCheck = service.idCheck(uid);
+	 
+	 int result =0;
+	 
+	 if(idCheck != null) {
+		 result =1;
+	 }
+	 return result;
+	}
+
 	@RequestMapping("/member/faq")
 	public String faq() {
 		return "/member/faq";

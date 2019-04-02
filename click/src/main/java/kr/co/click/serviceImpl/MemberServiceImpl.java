@@ -29,6 +29,11 @@ public class MemberServiceImpl implements MemberService {
 		
 	}
 
+	@Override
+	public MemberVO idCheck(String uid) {
+		return dao.idCheck(uid);
+	}
+
 
 
 }

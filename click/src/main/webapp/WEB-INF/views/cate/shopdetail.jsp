@@ -1,20 +1,20 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../_head.jsp" %>
-        <main>
-          <div id="wrapper">
-            <div id="detail_wrap">
-           	 <div class="detail_left">
-              <div class="left_img" >
+ <main>
+    <div id="wrapper">
+      <div id="detail_wrap">
+     	 <div class="detail_left">
+        	<div class="left_img" >
                 <img src="/click/detail/${goods.GOODS_ID}/${goods.FILENAME}" alt="옷이미지">
-              </div>
-            </div>
-            <div class="detail_right">
-              <div class="cinfo">
-                <div class="name">${goods.GOODS_TITLE} </div>
-                <div class="price"><span>${goods.GOODS_PRICE}원</span> </div>
-              </div>
-              <table>
+             </div>
+          </div>
+           <div class="detail_right">
+             <div class="cinfo">
+               <div class="name">${goods.GOODS_TITLE} </div>
+               <div class="price"><span>${goods.GOODS_PRICE}원</span> </div>
+             </div>
+             <table>
                 <tbody>
                   <tr>
                     <th>제품코드</th>

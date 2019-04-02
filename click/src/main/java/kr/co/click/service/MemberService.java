@@ -6,6 +6,7 @@ public interface MemberService {
 	public MemberVO login(MemberVO vo);
 	public void join(MemberVO vo);
 	public void faq();
+	public MemberVO idCheck(String uid) throws Exception;
 	
 
 }

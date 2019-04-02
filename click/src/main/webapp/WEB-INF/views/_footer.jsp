@@ -22,11 +22,11 @@
 
 
             <div> STORE GUIDE
-              <ul>
-                <li><a href="./notice.html"><img src="/click/img/notice.png" alt="로고"><span>공지사항</span></a></li>
-                <li><a href="./notice.html"><img src="/click/img/center.png" alt="로고"><span>고객센터</span></a></li>
-                <li><a href="./notice.html"><img src="/click/img/refund.png" alt="로고"><span>교환/반품</span></a></li>
-                <li><a href="./notice.html"><img src="/click/img/review.png" alt="로고"><span>상품리뷰</span></a></li>
+              <ul class="f_hover">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="./notice.html">교환/반품</a></li>
+                <li><a href="./notice.html">상품리뷰</a></li>
             </ul>
             </div>
 
@@ -47,3 +47,4 @@
   </body>
 
 </html>
+              

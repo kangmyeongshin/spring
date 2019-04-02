@@ -4,7 +4,7 @@
       <main>
         <div class="slider">
           <ul>
-            <li><a href="#"><img class="active" src="./img/slider1.jpg"  alt="슬라이더1"></a></li>
+            <li><a href="#"><img src="./img/slider1.jpg"  alt="슬라이더1"></a></li>
             <li><a href="#"><img src="./img/slider2.jpg"  alt="슬라이더1"></a></li>
             <li><a href="#"><img src="./img/slider3.jpg"  alt="슬라이더1"></a></li>
           </ul>
