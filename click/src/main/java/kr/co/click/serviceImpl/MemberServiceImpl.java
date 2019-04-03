@@ -34,6 +34,14 @@ public class MemberServiceImpl implements MemberService {
 		return dao.idCheck(uid);
 	}
 
+	@Override
+	public void modify(MemberVO vo) {
+		
+		 dao.modify(vo);
+	}
+
+	
+
 
 
 }

@@ -47,13 +47,13 @@
 	                 	</c:if>
 	                </li>
 	                <li><a class ="login_btn" href="/click/member/join">JOIN</a></li>
-	                <li><a href="/click/member/mypage?myorder">MY PAGE </a>
+	                <li><a href="/click/member/mypage?myorder_type=myorder">MY PAGE </a>
 	                	<ol>
-		                    <li><a href="/click/member/mypage?myorder">주문내역</a></li>
-		                    <li><a href="#">쿠폰내역</a></li>
+		                    <li><a href="/click/member/mypage?mypage_type=myorder">주문내역</a></li>
+		                    <li><a href="/click/member/mypage?mypage_type=cuponlist">쿠폰내역</a></li>
 		                    <li><a href="#">적립금내역</a></li>
 		                    <li><a href="#">위시리스트</a></li>
-		                    <li><a href="#">회원정보수정</a></li>
+		                    <li><a href="/click/member/modify">회원정보수정</a></li>
 	               	   </ol>
 	                </li>
 	                <li>

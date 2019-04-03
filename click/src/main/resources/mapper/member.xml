@@ -21,6 +21,10 @@
 	<select id="idcheck" resultType="kr.co.click.vo.MemberVO">
       SELECT uid FROM CLICK_MEMBER
       WHERE uid=#{uid};
-</select>
+	</select>
+	
+	<update id="UPDATE_REGISTER">
+		UPDATE `CLICK_MEMBER` SET pass=PASSWORD(#{pass}),nick =#{nick},email=#{email}  WHERE uid=#{uid};
+	</update>
 	
 </mapper>

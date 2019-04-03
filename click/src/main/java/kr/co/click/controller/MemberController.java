@@ -32,7 +32,7 @@ public class MemberController {
 		return "/member/login";
 	}
 	@RequestMapping(value="/member/login", method=RequestMethod.POST)
-	public String login(HttpSession sess, MemberVO vo, String page) {
+	public String login(HttpSession sess, MemberVO vo, String page,String page1) {
 		MemberVO member = service.login(vo);
 
 		if(member != null) {
@@ -40,8 +40,10 @@ public class MemberController {
 			//page == null 은 안되고 page.equals("")로 해야 되었다.
 			if(page.equals("")) {
 				return "redirect:/index";
-			}else {
+			}else if(page.equals("mypage")){
 				return "redirect:/member/mypage";
+			}else {
+				return "redirect:/member/modify";
 			}
 			
 		}else {
@@ -65,6 +67,30 @@ public class MemberController {
 		vo.setRegip(req.getRemoteAddr());
 		service.join(vo);
 		return "/member/login";
+	}
+	
+	@RequestMapping(value="/member/modify" ,method=RequestMethod.GET)
+	public String modify(HttpSession sess,HttpServletRequest req) {
+		MemberVO member = (MemberVO) sess.getAttribute("member");
+		if(member != null) {
+			return "/member/modify";
+		}else {
+			return "redirect:/member/login?page=modify";
+		}
+		
+	}
+	@RequestMapping(value="/member/modify" ,method=RequestMethod.POST)
+	public String modify(MemberVO vo,HttpServletRequest req){
+		service.modify(vo);
+		
+		/*System.out.println("uid : "+vo.getUid());
+		System.out.println("nick : "+vo.getNick());
+		System.out.println("email : "+vo.getEmail());
+		System.out.println("hp : "+vo.getHp());
+		*/
+		
+		vo.setRegip(req.getRemoteAddr());
+		return "/member/mypage";
 	}
 	
 	@ResponseBody

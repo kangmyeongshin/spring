@@ -19,6 +19,9 @@ public class MemberDao {
 		mybatis.insert("cl.mapper.member.INSERT_MEMBER",vo);
 	}
 
+
+	
+	
 	public void faq() {
 		
 	}
@@ -26,6 +29,8 @@ public class MemberDao {
 	public MemberVO idCheck(String uid) {
 		return mybatis.selectOne("cl.mapper.member.idcheck",uid);
 	}
-	
+	public int modify(MemberVO vo) {
+		return mybatis.update("cl.mapper.member.UPDATE_REGISTER",vo);
+	}
 
 }

@@ -7,6 +7,7 @@ public interface MemberService {
 	public void join(MemberVO vo);
 	public void faq();
 	public MemberVO idCheck(String uid) throws Exception;
+	public void modify(MemberVO vo);
 	
 
 }
