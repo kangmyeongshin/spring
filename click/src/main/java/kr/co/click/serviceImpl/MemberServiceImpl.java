@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import kr.co.click.dao.MemberDao;
 import kr.co.click.service.MemberService;
 import kr.co.click.vo.MemberVO;
+import kr.co.click.vo.MypageVO;
+import kr.co.click.vo.TermsVO;
 @Service
 public class MemberServiceImpl implements MemberService {
 
@@ -39,6 +41,17 @@ public class MemberServiceImpl implements MemberService {
 		
 		 dao.modify(vo);
 	}
+
+	@Override
+	public TermsVO terms() {
+		return dao.terms();
+	}
+
+	@Override
+	public MypageVO myOrder(MemberVO member) {
+		return dao.myOrder(member);
+	}
+
 
 	
 

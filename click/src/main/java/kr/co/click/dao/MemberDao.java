@@ -6,6 +6,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
 import kr.co.click.vo.MemberVO;
+import kr.co.click.vo.MypageVO;
+import kr.co.click.vo.TermsVO;
 
 @Repository
 public class MemberDao {
@@ -19,8 +21,9 @@ public class MemberDao {
 		mybatis.insert("cl.mapper.member.INSERT_MEMBER",vo);
 	}
 
-
-	
+	public TermsVO terms() {
+		return mybatis.selectOne("cl.mapper.member.SELECT_TERMS");
+	}
 	
 	public void faq() {
 		
@@ -32,5 +35,9 @@ public class MemberDao {
 	public int modify(MemberVO vo) {
 		return mybatis.update("cl.mapper.member.UPDATE_REGISTER",vo);
 	}
+	public MypageVO myOrder(MemberVO member) {
+		return mybatis.selectOne("cl.mapper.member.SELECT_MYORDER",member);
+	}
+
 
 }

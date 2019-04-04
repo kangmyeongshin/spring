@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.co.click.service.MemberService;
 import kr.co.click.vo.MemberVO;
+import kr.co.click.vo.MypageVO;
+import kr.co.click.vo.TermsVO;
 
 @Controller
 public class MemberController {
@@ -59,7 +61,10 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="/member/join" ,method=RequestMethod.GET)
-	public String join() {
+	public String join(Model model) {
+        TermsVO terms = service.terms();
+        //service.terms(tvo)로 했었는데 이안의 값은 dao에서 sql에서 #값으로 받을 때 쓰는것!!
+ 		model.addAttribute("terms", terms);
 		return "/member/join";
 	}
 	@RequestMapping(value="/member/join" ,method=RequestMethod.POST)
@@ -70,7 +75,7 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="/member/modify" ,method=RequestMethod.GET)
-	public String modify(HttpSession sess,HttpServletRequest req) {
+	public String modify(HttpSession sess) {
 		MemberVO member = (MemberVO) sess.getAttribute("member");
 		if(member != null) {
 			return "/member/modify";
@@ -114,12 +119,15 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/member/mypage")
-	public String mypage(HttpSession sess) {
-		
+	public String mypage(HttpSession sess,Model model,String uid) {
+	
 		MemberVO member = (MemberVO) sess.getAttribute("member");
 		
+		
 		if(member != null) {
-			
+			MemberVO member1 = (MemberVO) sess.getAttribute("member");
+			MypageVO myorder = service.myOrder(member);
+			model.addAttribute("myorder", myorder);
 			//sess.setAttribute("member", member);
 			return "/member/mypage";
 			

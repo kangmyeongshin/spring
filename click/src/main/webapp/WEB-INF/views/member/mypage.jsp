@@ -35,13 +35,16 @@
               <table border="0">
                 <tbody>
                   <tr>
-                    <th>번호</th>
+                  	
+                    <th>번호
+                    </th>
                     <th>주문번호</th>
                     <th>주문날짜</th>
                     <th>주문상품</th>
                   </tr>
                   <tr>
-                    <td></td>
+                    <td><input type="hidden" name="seq" value="${myorder.seq}" />
+                    ${myorder.seq}</td>
                     <td></td>
                     <td></td>
                     <td></td>

@@ -15,6 +15,8 @@ public class MemberVO {
 	private String regip;
 	private String rdate;
 	private String file;
+	
+		
 	public int getSeq() {
 		return seq;
 	}

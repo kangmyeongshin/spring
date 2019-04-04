@@ -19,7 +19,7 @@
 		 rdate=NOW();
 	</insert>
 	<select id="idcheck" resultType="kr.co.click.vo.MemberVO">
-      SELECT uid FROM CLICK_MEMBER
+      SELECT uid FROM `CLICK_MEMBER`
       WHERE uid=#{uid};
 	</select>
 	
@@ -27,4 +27,11 @@
 		UPDATE `CLICK_MEMBER` SET pass=PASSWORD(#{pass}),nick =#{nick},email=#{email}  WHERE uid=#{uid};
 	</update>
 	
+	<select id="SELECT_TERMS" resultType="kr.co.click.vo.TermsVO">
+		SELECT terms FROM `JSP_TERMS`;
+	</select>
+	
+	<select id="SELECT_MYORDER" resultType="kr.co.click.vo.MypageVO">
+		SELECT * FROM `CLICK_MYORDER` WHERE uid=#{uid};
+	</select>
 </mapper>

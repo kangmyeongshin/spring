@@ -136,7 +136,9 @@
        </div>
        <div class="terms">
          <h3>이용약관</h3>
-         <textarea>ddddd</textarea>
+         <textarea>
+        ${terms.terms}
+         </textarea>
        </div>
        <div class="pd1">
 
